@@ -19,10 +19,10 @@ from django.urls import path
 from blog.views import homepage, index_post, showpost, ads_view
 
 urlpatterns = [
+    path('ads.txt', ads_view),
     path('admin/', admin.site.urls),
     path('', index_post),
     path('post/<str:slug>', showpost), # 定義視圖與參數名稱
-    path('ads.txt', ads_view),
 ]
 
 

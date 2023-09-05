@@ -33,5 +33,5 @@ def showpost(request, slug):
 
 def ads_view(request):
     """Replace pub-0000000000000000 with your own publisher ID"""
-    line  =  "google.com, pub-7261176306739469, DIRECT, f08c47fec0942fa0"
-    return HttpResponse(line)
+    content  =  "google.com, pub-7261176306739469, DIRECT, f08c47fec0942fa0"
+    return HttpResponse(content, content_type='text/plain')
