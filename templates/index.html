@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>
+            PTT 看板轉錄
+        </title>
+        <style>
+            .post_title {
+                font-family: 微軟正黑體;
+                font-size: 16pt;
+                font-weight: bold;
+                color:brown;
+            }
+    
+            .post_body {
+                font-family: 微軟正黑體;
+                font-size: 10pt;
+                letter-spacing: 1pt;
+                color:midnightblue;
+            }
+       </style>
+    </head>
+<body>
+    <h1> 轉錄文章 </h1>
+    <hr/>
+
+    {% for post in posts%}
+    <div class="post_title">
+        <a href='post/{{post.slug}}'>{{post.title}}</a>
+    </div>
+    <br>
+    {% endfor %}
+
+    <hr/>
+    <h3>現在時刻：{{ now }} </h3>
+</body>
+</html>
+
