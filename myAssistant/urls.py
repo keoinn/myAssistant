@@ -25,11 +25,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_post),
     path('post/<str:slug>', showpost), # 定義視圖與參數名稱
-] + staticfiles_urlpatterns()
+]
 
 
-# from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-# import myAssistant.settings
-# if myAssistant.settings.DEBUG:
-#     urlpatterns += staticfiles_urlpatterns()
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+import myAssistant.settings
+if myAssistant.settings.DEBUG:
+    urlpatterns += staticfiles_urlpatterns()
 
